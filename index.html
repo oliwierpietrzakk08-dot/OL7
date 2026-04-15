@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marketing Online – Oliwier Pietrzak</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&family=Inter:wght@400;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Fixed background -->
+  <video class="bg-video" id="bgVideo" src="backgroundvideo1.mp4" autoplay muted loop playsinline></video>
+
+  <!-- Usunięto whiteLayer -->
+
+  <!-- Usunięto fb-corner (przeniesiony do nav) -->
+
+  <!-- Navigation -->
+  <nav id="mainNav">
+    <div class="nav-links">
+      <a href="#slide1" class="active">Strona główna</a>
+      <a href="#slide2">O nas</a>
+      <a href="#circleSlide">Oferta</a>
+      <a href="#portfolioSection">Realizacje</a>
+      <a href="#footerSection" class="cta-nav">Kontakt</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <!-- Price bar (kalkulator) -->
+  <div id="priceBar" class="price-bar">
+    <span class="price-bar__label">Wybrany pakiet</span>
+    <span class="price-bar__name" id="priceBarName">—</span>
+    <span class="price-bar__sep">·</span>
+    <span class="price-bar__price" id="priceBarPrice">—</span>
+    <button class="price-bar__close" id="priceBarClose">✕</button>
+  </div>
+
+  <!-- Karta: slide 1 + slide 2 -->
+  <div class="card">
+    <div class="slide" id="slide1">
+      <img src="logool7.jpg" alt="OL7 logo" class="hero-logo">
+      <h1 class="hero-title">Marketing</h1>
+      <h1 class="hero-title-italic">Online</h1>
+      <p class="hero-subtitle">Reklamy, które naprawdę działają</p>
+      <div class="hero-buttons">
+        <a href="tel:795671944" class="btn btn-primary">Zadzwoń</a>
+        <a href="#circleSlide" class="btn btn-secondary">Oferta</a>
+      </div>
+    </div>
+
+    <div class="slide" id="slide2">
+      <div class="about-layout">
+        <img src="logool7.jpg" alt="OL7 logo" class="about-logo-img">
+        <div class="about-content">
+          <p class="about-label">O mnie</p>
+          <h2 class="about-title">Skuteczny marketing<br>to <em>moja pasja</em></h2>
+          <p class="about-desc">Nazywam się Oliwier Pietrzak i pomagam lokalnym firmom zamieniać ich obecność w sieci na realne zyski. Moje podejście opieram na nowoczesnym marketingu, gdzie design strony to tylko początek – liczy się skuteczność i to, czy klient do Ciebie zadzwoni.</p>
+          <p class="about-desc">Zajmuję się profesjonalnym prowadzeniem Facebooka, Instagrama oraz optymalizacją wizytówek Google. Tworzę również nowoczesne strony WWW, które nie tylko dobrze wyglądają, ale przede wszystkim sprzedają.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Koło: slide 3 Oferta -->
+  <div id="circleSlide">
+    <div class="circle-content" id="circleContent">
+      <div class="circle-inner-offers">
+      <section class="offers-block">
+        <p class="offers-label">Pakiety abonamentowe</p>
+        <h2 class="offers-title">Wybierz swój plan <em>miesięczny</em></h2>
+        <div class="packages-grid">
+
+          <div class="package selectable" data-name="Starter – Widoczność lokalna" data-price="od 600 zł / mies.">
+            <p class="pkg-tier">Starter</p>
+            <p class="pkg-tagline">Widoczność lokalna</p>
+            <p class="pkg-desc">Dla firm, które chcą zaistnieć w sieci i zadbać o podstawową obecność online.</p>
+            <p class="pkg-price">od <strong>600 zł</strong> / mies.</p>
+            <ul class="pkg-list">
+              <li>Wizytówka Google – optymalizacja</li>
+              <li>Zbieranie opinii Google</li>
+              <li>Prowadzenie Facebooka lub Instagrama</li>
+            </ul>
+          </div>
+
+          <div class="package featured selectable" data-name="Marketing aktywny" data-price="od 1 200 zł / mies. + budżet reklamowy">
+            <span class="pkg-badge">Najpopularniejszy</span>
+            <p class="pkg-tier">Marketing aktywny</p>
+            <p class="pkg-tagline">Aktywne pozyskiwanie klientów</p>
+            <p class="pkg-desc">Dla firm, które chcą aktywnie pozyskiwać klientów przez reklamy i social media.</p>
+            <p class="pkg-price">od <strong>1 200 zł</strong> / mies. <span class="pkg-budget">+ budżet rekl.</span></p>
+            <ul class="pkg-list">
+              <li>Wszystko ze Starter, plus</li>
+              <li>Prowadzenie FB + Instagram</li>
+              <li>Meta Ads lub Google Ads (do wyboru)</li>
+              <li>Raport miesięczny</li>
+            </ul>
+          </div>
+
+          <div class="package selectable" data-name="Premium – Pełna obsługa" data-price="od 2 200 zł / mies. + budżet reklamowy">
+            <p class="pkg-tier">Premium</p>
+            <p class="pkg-tagline">Pełna obsługa</p>
+            <p class="pkg-desc">Kompleksowe działania marketingowe – reklamy, social media, SEO i optymalizacja strony.</p>
+            <p class="pkg-price">od <strong>2 200 zł</strong> / mies. <span class="pkg-budget">+ budżet rekl.</span></p>
+            <ul class="pkg-list">
+              <li>Wszystko z Aktywnego, plus</li>
+              <li>Meta Ads + Google Ads</li>
+              <li>Optymalizacja strony WWW (SEO)</li>
+              <li>Priorytetowy kontakt i wsparcie</li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+
+      <div class="offers-divider"></div>
+
+      <section class="offers-block">
+        <p class="offers-label">Strony WWW</p>
+        <h2 class="offers-title offers-title--sm">Realizacje <em>jednorazowe</em></h2>
+        <div class="web-grid">
+
+          <div class="web-card selectable" data-name="Strona wizytówkowa" data-price="od 1 500 zł jednorazowo">
+            <p class="web-name">Strona wizytówkowa</p>
+            <p class="web-price">od <strong>1 500 zł</strong> jednorazowo</p>
+            <ul class="pkg-list">
+              <li>1–3 podstrony, formularz kontaktowy</li>
+              <li>Responsywna, gotowa do działania</li>
+            </ul>
+          </div>
+
+          <div class="web-card selectable" data-name="Strona rozbudowana" data-price="od 3 000 zł jednorazowo">
+            <p class="web-name">Strona rozbudowana</p>
+            <p class="web-price">od <strong>3 000 zł</strong> jednorazowo</p>
+            <ul class="pkg-list">
+              <li>Blog, galeria, więcej podstron</li>
+              <li>Podstawowe SEO techniczne</li>
+            </ul>
+          </div>
+
+          <div class="web-card selectable" data-name="Utrzymanie strony" data-price="od 150 zł / mies.">
+            <p class="web-name">Utrzymanie strony</p>
+            <p class="web-price">od <strong>150 zł</strong> / mies.</p>
+            <ul class="pkg-list">
+              <li>Aktualizacje, bezpieczeństwo</li>
+              <li>Drobne zmiany na stronie</li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+
+      <p class="offers-footnote">* Budżet reklamowy (Meta / Google Ads) jest zawsze osobnym kosztem po stronie klienta i nie wlicza się w wynagrodzenie agencji.</p>
+      </div><!-- zamykamy circle-inner-offers -->
+
+    <!-- Realizacje -->
+    <section class="portfolio-section" id="portfolioSection">
+      <div class="portfolio-inner">
+        <p class="portfolio-label">PORTFOLIO</p>
+        <h2 class="portfolio-title">REALIZACJE</h2>
+        <p class="portfolio-note">— Projekty koncepcyjne —</p>
+
+        <div class="projects-grid">
+          
+          <div class="project-card">
+            <div class="project-image">
+              <img src="plus_logo.png" alt="PLUS Izolacje">
+            </div>
+            <div class="project-info">
+              <p class="project-tagline">BUDOWNICTWO · IZOLACJE</p>
+              <h3 class="project-name">PLUS Izolacje</h3>
+              <p class="project-desc">Wielostronicowa strona internetowa z interaktywnym kalkulatorem wycen, sekcją opinii klientów i rozbudowaną nawigacją.</p>
+              <div class="project-tags">
+                <span>STRONA WWW</span>
+                <span>KALKULATOR</span>
+                <span>MULTI-PAGE</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card project-card--reverse">
+            <div class="project-image">
+              <img src="rtt_logo.png" alt="RTT by Perkowska">
+            </div>
+            <div class="project-info">
+              <p class="project-tagline">USŁUGI · BEAUTY</p>
+              <h3 class="project-name">RTT by Perkowska</h3>
+              <p class="project-desc">Aplikacja webowa z zapleczem bazodanowym, formularzem kontaktowym, cennikiem, opiniami i animacjami.</p>
+              <div class="project-tags">
+                <span>NEXT.JS</span>
+                <span>TYPESCRIPT</span>
+                <span>SUPABASE</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+    </section>
+ 
+    <!-- Testimonials -->
+    <section class="testimonials-section" id="testimonialsSection">
+      <div class="testimonials-inner">
+        <p class="testimonials-label">OPINIE KLIENTÓW</p>
+        <h2 class="testimonials-title">CO MÓWIĄ INNI?</h2>
+        
+        <div class="testimonials-grid">
+          
+          <div class="testimonial-card">
+            <div class="testimonial-header">
+              <img src="plus_logo.png" alt="Piotr Lus" class="testimonial-avatar">
+              <div class="testimonial-meta">
+                <p class="testimonial-author">Piotr Lus</p>
+                <p class="testimonial-company">PLUS Izolacje</p>
+              </div>
+            </div>
+            <p class="testimonial-text">"Współpraca z Oliwierem to strzał w dziesiątkę. Odświeżenie naszej strony i wdrożenie kalkulatora wycen znacząco przełożyło się na jakość zapytań od klientów. Pełen profesjonalizm i świetny kontakt!"</p>
+            <div class="testimonial-rating">★★★★★</div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-header">
+              <img src="rtt_logo.png" alt="Krystyna Perkowska" class="testimonial-avatar">
+              <div class="testimonial-meta">
+                <p class="testimonial-author">Krystyna Perkowska</p>
+                <p class="testimonial-company">RTT by Perkowska</p>
+              </div>
+            </div>
+            <p class="testimonial-text">"Oliwier ma niesamowite wyczucie estetyki. Strona dla mojego salonu jest nie tylko piękna, ale i funkcjonalna. Wszystko działa bez zarzutu, a klienci chwalą przejrzystość cennika. Polecam!"</p>
+            <div class="testimonial-rating">★★★★★</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer" id="footerSection">
+      <div class="footer-inner">
+
+        <div class="footer-logo">
+          <img src="logool7.jpg" alt="OL7 logo" class="footer-logo-img">
+          <div>
+            <p class="footer-brand">Oliwier Pietrzak</p>
+            <p class="footer-tagline">Marketing Online</p>
+          </div>
+        </div>
+
+        <div class="footer-contact">
+          <a href="tel:795671944" class="footer-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.56a16 16 0 0 0 6.29 6.29l.94-.94a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            795 671 944
+          </a>
+          <a href="mailto:kontakt@ol7.pl" class="footer-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            kontakt@ol7.pl
+          </a>
+        </div>
+
+        <div class="footer-social">
+          <!-- Instagram -->
+          <a href="#" class="social-btn" aria-label="Instagram">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <!-- Facebook -->
+          <a href="https://www.facebook.com/profile.php?id=61572059428856" target="_blank" rel="noopener" class="social-btn" aria-label="Facebook">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 Oliwier Pietrzak · Marketing Online · Wszelkie prawa zastrzeżone</p>
+      </div>
+    </footer>
+
+    </div><!-- zamykamy circle content -->
+  </div><!-- zamykamy circle slide -->
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
